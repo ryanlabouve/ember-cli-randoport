@@ -9,7 +9,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "tape tests/**/*.js"
   },
   "repository": "http://github.com/ryanlabouve/ember-cli-randoport",
   "engines": {
@@ -35,7 +35,9 @@
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-try": "~0.0.8"
+    "ember-try": "~0.0.8",
+    "lodash": "^4.0.0",
+    "tape": "^4.4.0"
   },
   "keywords": [
     "ember-addon"
@@ -45,8 +47,5 @@
     "ember-cli-babel": "^5.1.5",
     "lodash": "^4.0.0",
     "strip-json-comments": "^2.0.0"
-  },
-  "ember-addon": {
-    "configPath": "tests/dummy/config"
   }
 }
