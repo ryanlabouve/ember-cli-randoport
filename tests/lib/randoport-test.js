@@ -37,15 +37,17 @@ test('randoPort returns new object', t => {
   t.notEqual(o, randoPort(o));
 });
 
-test('object with existing port', t => {
-  t.plan(5000);
+test('object with existing port or blacklisted port', t => {
+  t.plan(10000);
   let i = 0;
   for(i; i < 5000; i +=1) {
     const o = {
       "port": _.random(4000, 4999)
     };
 
-    t.notEqual(o.port, randoPort(o).port);
+    const r = randoPort(o);
+    t.notEqual(o.port, r.port);
+    t.notEqual(4200, r.port);
   }
 });
 // test('when 4200 is generated as port', t => {});
