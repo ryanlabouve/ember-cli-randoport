@@ -50,4 +50,13 @@ test('object with existing port or blacklisted port', t => {
     t.notEqual(4200, r.port);
   }
 });
-// test('when 4200 is generated as port', t => {});
+
+test('port between 4000 and 4999', t => {
+  t.plan(2000);
+  let i = 0;
+  for(i; i < 1000; i +=1) {
+    const r = randoPort({});
+    t.assert(r.port > 3999);
+    t.assert(r.port < 5000);
+  }
+});
