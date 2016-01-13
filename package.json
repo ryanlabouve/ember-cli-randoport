@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-randoport",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Randomize which port ember uses to boot!",
   "directories": {
     "doc": "doc",
