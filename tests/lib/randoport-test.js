@@ -2,6 +2,7 @@
 const test = require('tape');
 const randoPort = require('../../lib/randoport');
 const _ = require('lodash');
+const http = require('http');
 
 test('empty object', t => {
   t.plan(1);
@@ -49,6 +50,20 @@ test('object with existing port or blacklisted port', t => {
     t.notEqual(o.port, r.port);
     t.notEqual(4200, r.port);
   }
+});
+
+test('on a used port', t => {
+  t.plan(5000);
+  const portObj = randoPort({});
+  const s = http.createServer().listen(portObj.port);
+  console.log('Dummy port', portObj);
+  let i = 0;
+  for(i; i < 5000; i +=1) {
+    const r = randoPort({});
+    t.notEqual(r.port, portObj.port);
+  }
+
+  s.close();
 });
 
 test('port between 4000 and 4999', t => {

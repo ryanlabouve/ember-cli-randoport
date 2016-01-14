@@ -44,8 +44,10 @@
   ],
   "dependencies": {
     "chalk": "^1.1.1",
+    "deasync": "^0.1.4",
     "ember-cli-babel": "^5.1.5",
     "lodash": "^4.0.0",
+    "portfinder": "^0.4.0",
     "strip-json-comments": "^2.0.0"
   }
 }
