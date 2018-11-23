@@ -1,8 +1,10 @@
 {
   "name": "ember-cli-randoport",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Randomize which port ember uses to boot!",
-  "keywords": ["ember-addon"],
+  "keywords": [
+    "ember-addon"
+  ],
   "repository": "http://github.com/ryanlabouve/ember-cli-randoport",
   "license": "MIT",
   "author": "",
